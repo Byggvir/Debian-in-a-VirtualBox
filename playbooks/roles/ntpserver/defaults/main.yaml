@@ -4,6 +4,8 @@
 # Geändert am:  2020-04-07
 
 ntp_server:
+  homeserver:
+    - "192.168.2.3"
   hetzner:
     - "213.239.239.164"
     - "213.239.239.165"
@@ -30,7 +32,6 @@ ntp_server:
   arco:
     - "de.pool.ntp.arcor-ip.net"
   versatel:
-
     - "time.versatel.de"
     - "ntp1.versatel.net"
     - "ntp2.versatel.net"
