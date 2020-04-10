@@ -1,0 +1,7 @@
+---
+ansible_host: bw2.arend.tksd
+ansible_user: thomas
+
+ntpprovider: t-online
+
+...

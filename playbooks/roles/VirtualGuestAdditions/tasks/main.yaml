@@ -1,0 +1,32 @@
+---
+# Erstellt von: Thomas Arend
+# Erstellt am:  2020-04-10
+
+# Ab hier muss noch dein Code hinein
+
+
+- name: "Install packages required by VirtualBox Guest Additions" 
+  become: yes
+  apt:
+    name:
+        - "build-essential"
+        - "dkms"
+        - "linux-headers-{{ ansible_kernel }}"
+    update_cache: yes
+
+- name: "Create directory for CDROM"
+  file:
+    path: "/media/cdrom0"
+    state: directory
+    mode: 0755
+    
+- name: "Guest Additions CD"
+  become: true
+  ignore_errors: true
+  raw: '[ -n "$(findmnt /dev/sr0)" ] || mount -r /dev/sr0'
+
+- name: Mound Guest Additions CD
+  become: yes
+  raw: "sh /media/cdrom0/VBoxLinuxAdditions.run --nox11"
+  
+...

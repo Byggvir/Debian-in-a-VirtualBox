@@ -1,0 +1,17 @@
+---
+
+# Install additional  nice to have packages
+
+- name: apt install initial packages
+  become: yes
+  apt:
+    name:
+        - aptitude
+        - findutils
+        - fortune
+        - pwgen
+        - sudo
+        - vim
+    update_cache: yes
+
+...

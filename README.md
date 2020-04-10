@@ -1,2 +1,5 @@
-# Debian-in-a-VirtualBox
-Manage a Virtual Box runing Debian
+# Ansible4RaspberryPi
+Ansible scripts to manage Raspberry  Pi cluster
+
+- LAMP
+- Samba

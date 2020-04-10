@@ -1,0 +1,10 @@
+---
+# My Raspberry Pi and other Debian hosts
+
+all:
+    children:
+      VirtualBoxes:
+            hosts:
+                bw[1:2]:
+
+...

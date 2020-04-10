@@ -1,0 +1,12 @@
+---
+
+- name: Install ntpserver
+  hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+    - include_role:
+        name: ntpserver
+
+
+...
